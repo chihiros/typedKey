@@ -3,6 +3,11 @@ import { BrowserWindow, app } from "electron";
 
 const createWindow = () => {
   const mainWindow = new BrowserWindow({
+    frame: false,
+    transparent: true,
+    alwaysOnTop: true,
+    backgroundColor: '#33000000',
+    resizable: false,
     webPreferences: {
       preload: path.resolve(__dirname, "preload.js"),
     },
